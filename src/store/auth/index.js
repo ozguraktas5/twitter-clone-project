@@ -7,7 +7,20 @@ const initialState = {
         fullName: 'Özgür Aktaş',
         avatar: 'https://pbs.twimg.com/profile_images/1687082554308886528/SaJdq0M8_400x400.jpg'
     },
-    accounts: []
+    accounts: [
+        {
+            id: 1,
+            username: 'murat_cuhac',
+            fullName: 'Gavin Harris',
+            avatar: 'https://pbs.twimg.com/profile_images/1531286021031198724/hpABpDQB_400x400.jpg'
+        },
+        {
+            id: 2,
+            username: 'bilallgunaydin',
+            fullName: 'Bilal Günaydın',
+            avatar: 'https://pbs.twimg.com/profile_images/1675386025546219520/nGTiD939_400x400.jpg'
+        }
+    ]
 }
 
 const auth = createSlice({
