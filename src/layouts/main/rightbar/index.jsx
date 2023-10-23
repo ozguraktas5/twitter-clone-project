@@ -1,7 +1,9 @@
+import Search from "./search";
+
 export default function RightSidebar() {
     return(
-        <aside className="w-[350px]">
-            right sidebar
+        <aside className="w-[350px] mr-2.5">
+            <Search />
         </aside>
     )
 }
