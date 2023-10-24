@@ -5,7 +5,7 @@ export default function Search() {
   const [focus, setFocus] = useState(false);
 
   return (
-    <div className="min-h-[32px] h-[53px] mb-3 flex items-center">
+    <div className="min-h-[32px] h-[53px] mb-3 flex items-center relative">
       <label className="h-[43px] rounded-full bg-[#202327] w-full group relative focus-within:bg-black border border-transparent focus-within:border-[#1d9bf0]">
         <div className="w-[56px] h-full flex items-center justify-center absolute top-0 left-0 pointer-events-none">
           <svg
@@ -27,7 +27,7 @@ export default function Search() {
           onBlur={() => setFocus(false)}
           onChange={(e) => setQuery(e.target.value)}
         />
-        {(query && focus) && (
+        {query && focus && (
           <button
             type="button"
             onClick={() => setQuery("")}
@@ -40,6 +40,13 @@ export default function Search() {
               />
             </svg>
           </button>
+        )}
+        {focus && (
+          <div className="absolute top-full w-[350px] translate-y-px -left-px bg-black shadow-box max-h-[calc(80vh-53px)] rounded-lg text-center min-h-[100px]">
+            <p className="p-3 pt-5 text-[#71767b] leading-5">
+              Kişileri, listeleri veya anahtar kelimeleri aramayı dene
+            </p>
+          </div>
         )}
       </label>
     </div>
