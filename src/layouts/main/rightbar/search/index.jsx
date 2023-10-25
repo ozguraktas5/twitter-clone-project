@@ -14,7 +14,7 @@ export default function Search() {
   return (
     <div
       ref={ref}
-      className="min-h-[32px] h-[53px] mb-3 flex items-center relative"
+      className="min-h-[32px] h-[53px] mb-3 flex items-center sticky top-0 bg-black z-10"
     >
       <label className="h-[43px] rounded-full bg-[#202327] w-full group relative focus-within:bg-black border border-transparent focus-within:border-[#1d9bf0]">
         <div className="w-[56px] h-full flex items-center justify-center absolute top-0 left-0 pointer-events-none">
@@ -31,7 +31,8 @@ export default function Search() {
         </div>
         <input
           type="text"
-          className="w-full h-full bg-transparent rounded-full outline-none pl-[56px] text-[15px]"
+          className="w-full h-full bg-transparent placeholder-[#71767b] rounded-full outline-none pl-[56px] text-[15px]"
+          placeholder="Ara"
           value={query}
           onFocus={() => setFocus(true)}
           onChange={(e) => setQuery(e.target.value)}
