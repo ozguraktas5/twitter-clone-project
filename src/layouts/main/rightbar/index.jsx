@@ -1,7 +1,9 @@
 
+import Footer from "./footer";
 import Premium from "./premium";
 import Search from "./search";
 import Topics from "./topics";
+import WhoFollow from "./who-follow";
 
 
 export default function RightSidebar() {
@@ -10,6 +12,8 @@ export default function RightSidebar() {
             <Search />
             <Premium />
             <Topics />
+            <WhoFollow />
+            <Footer />
         </aside>
     )
 }
