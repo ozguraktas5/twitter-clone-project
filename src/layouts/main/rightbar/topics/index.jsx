@@ -9,5 +9,6 @@ export default function Topics() {
         <Topic key={index} item={topic} />
       ))}
     </SidebarSection>
+
   );
 }
