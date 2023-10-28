@@ -1,6 +1,7 @@
 import {Popover, Disclosure} from "@headlessui/react";
 import {Link} from "react-router-dom";
 import classNames from "classnames";
+import { setModal } from "~/store/modal";
 
 
 export default function More() {
