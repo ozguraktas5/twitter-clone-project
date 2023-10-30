@@ -1,7 +1,8 @@
 import {Popover, Disclosure} from "@headlessui/react";
 import {Link} from "react-router-dom";
 import classNames from "classnames";
-import { setModal } from "~/store/modal";
+import { setModal } from "~/store/modal/actions";
+
 
 
 export default function More() {
@@ -153,7 +154,7 @@ export default function More() {
 								</Link>
 								<button
 									onClick={() => setModal('appearance')}
-									className="flex items-center px-3 h-11 w-full gap-3 font-medium hover:bg-[#eff3f41a] transition-colors"
+									className="flex items-center px-3 w-full h-11 w-full gap-3 font-medium hover:bg-[#eff3f41a] transition-colors"
 								>
 									<svg viewBox="0 0 24 24" className="h-[1.172rem]">
 										<path

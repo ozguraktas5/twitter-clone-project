@@ -9,6 +9,8 @@ import Modal from "~/modals";
 export default function MainLayout() {
   const modal = useModal();
 
+  
+
   return (
     <div className="w-[1265px] mx-auto flex">
       {modal && <Modal />}
