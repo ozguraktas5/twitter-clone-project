@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 export default function SidebarSection({ title, children, more }) {
   return (
-    <section className="bg-[color:var(--background-secondary)] mb-4 overflow-hidden rounded-2xl border border-[color:var(--background-secondary)]">
-      <h5 className="py-3 px-4 text-xl font-extrabold leading-6 flex items-center text-[#e7e9ea]">
+    <section className="bg-[color:var(--background-secondary)] mb-4 rounded-2xl border border-[color:var(--background-secondary)]">
+      <h5 className="py-3 px-4 text-xl font-extrabold leading-6 flex items-center text-[color:var(--color-base)]">
         {title}
       </h5>
       <div className="grid">{children}</div>

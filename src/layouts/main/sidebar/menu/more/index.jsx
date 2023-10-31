@@ -7,7 +7,7 @@ import { setModal } from "~/store/modal/actions";
 
 export default function More() {
 	return (
-		<Popover className="relative">
+		<Popover className="relative text-[color:var(--color-base)]">
 			<Popover.Button className="py-[3px] w-full text-left group outline-none">
 				<div
 					className="p-3 rounded-full transition-colors inline-flex items-center gap-5 group-hover:bg-[color:var(--background-third)]">
@@ -24,7 +24,7 @@ export default function More() {
 					</div>
 				</div>
 			</Popover.Button>
-			<Popover.Panel className="w-[318px] absolute bottom-0 left-0 bg-[color:black] shadow-box rounded-xl overflow-hidden">
+			<Popover.Panel className="w-[318px] absolute bottom-0 left-0 bg-[color:var(--background-primary)] shadow-box rounded-xl overflow-hidden">
 				<button
 					className="px-4 h-14 w-full transition-colors inline-flex items-center gap-5 hover:bg-[#eff3f41a]">
 					<div className="w-[1.641rem] h-[1.641rem] relative">
@@ -63,7 +63,7 @@ export default function More() {
 								className="flex items-center justify-between w-full p-4 font-bold hover:bg-[#eff3f41a] transition-colors">
 								İçerik Üreticisi Stüdyosu
 								<svg className={classNames("h-[1.172rem]", {
-									"rotate-180 text-[#1d9bf0]": open
+									"rotate-180 text-[color:var(--color-primary)]": open
 								})} viewBox="0 0 24 24">
 									<path
 										fill="currentColor"
@@ -93,7 +93,7 @@ export default function More() {
 								className="flex items-center justify-between w-full p-4 font-bold hover:bg-[#eff3f41a] transition-colors">
 								Profesyonel Araçlar
 								<svg viewBox="0 0 24 24" className={classNames("h-[1.172rem]", {
-									"rotate-180 text-[#1d9bf0]": open
+									"rotate-180 text-[color:var(--color-primary)]": open
 								})}>
 									<path
 										fill="currentColor"
@@ -123,7 +123,7 @@ export default function More() {
 								className="flex items-center justify-between w-full p-4 font-bold hover:bg-[#eff3f41a] transition-colors">
 								Ayarlar ve Destek
 								<svg viewBox="0 0 24 24" className={classNames("h-[1.172rem]", {
-									"rotate-180 text-[#1d9bf0]": open
+									"rotate-180 text-[color:var(--primary-color)]": open
 								})}>
 									<path
 										fill="currentColor"

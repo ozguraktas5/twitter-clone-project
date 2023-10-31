@@ -14,7 +14,7 @@ export default function Account() {
             <h6 className="font-bold leading-[20px]">{account.fullName}</h6>
             <div className="text-[#71767b]">@{account.username}</div>
           </div>
-          <svg viewBox="0 0 24 24" className="text-[#e7e9ea] ml-auto" width={18.75}>
+          <svg viewBox="0 0 24 24" className="text-[color:var(--color-base)] ml-auto" width={18.75}>
 							<path
 								fill="currentColor"
 								d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"

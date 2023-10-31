@@ -2,14 +2,27 @@ import {createSlice} from "@reduxjs/toolkit";
 
 
 const initialState = {
+	// backgroundColor: {
+	// 	primary: '#000',
+	// 	secondary: '#16181c',
+	// 	third: '#273340'
+	// },
+	// color: {
+	// 	primary: '#1d9bf0',
+	// 	secondary: '#8ecdf8',
+	// base: '#e7e9ea'
+
+	// },
+	// fontSize: 16
 	backgroundColor: {
-		primary: '#000',
-		secondary: '#16181c',
-		third: '#273340'
+		primary: '#15202b',
+		secondary: '#1e2732',
+		third: '#263340'
 	},
 	color: {
 		primary: '#1d9bf0',
 		secondary: '#8ecdf8',
+		base: 'red',
 
 	},
 	fontSize: 16
