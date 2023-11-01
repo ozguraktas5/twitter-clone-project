@@ -36,7 +36,7 @@ export default function AppearanceModal() {
                   @X · 10d
                 </div>
               </header>
-              <div className="text-[color:var(--color-base)] leading-5">
+              <div className="leading-5">
                 X'in merkezinde, tıpkı bunun gibi gönderi denen kısa mesajlar
                 yatar. Gönderiler; fotoğraflar, videolar, bağlantılar, metinler,
                 etiketler ve <Link className="text-[#1d9bf0] hover:underline" to="/x">@X</Link> gibi bahsetmeler içerebilir.
