@@ -16,6 +16,7 @@ export default function SidebarSection({ title, children, more }) {
           Daha fazla göster
         </Link>
       )}
+
     </section>
   );
 }
