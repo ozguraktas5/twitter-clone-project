@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Button from "~/components/button";
 
 export default function AppearanceModal() {
   return (
@@ -11,7 +12,7 @@ export default function AppearanceModal() {
           Bu ayarlar, bu tarayıcıdaki tüm X hesaplarını etkiler.
         </p>
         <div className="mx-8 mb-4">
-          <div className="border border-[#2f3336] px-4 flex py-3 gap-3 rounded-2xl">
+          <div className="border border-[color:var(--background-third)] px-4 flex py-3 gap-3 rounded-2xl">
             <img
               src="https://pbs.twimg.com/profile_images/1683899100922511378/5lY42eHs_x96.jpg"
               alt=""
@@ -36,7 +37,7 @@ export default function AppearanceModal() {
                   @X · 10d
                 </div>
               </header>
-              <div className="leading-5">
+              <div className="text-[color:var(--color-base)] leading-5 text-[15px]">
                 X'in merkezinde, tıpkı bunun gibi gönderi denen kısa mesajlar
                 yatar. Gönderiler; fotoğraflar, videolar, bağlantılar, metinler,
                 etiketler ve <Link className="text-[#1d9bf0] hover:underline" to="/x">@X</Link> gibi bahsetmeler içerebilir.
@@ -44,6 +45,8 @@ export default function AppearanceModal() {
             </div>
           </div>
         </div>
+
+        <Button>Bitti</Button>
       </div>
     </div>
   );
