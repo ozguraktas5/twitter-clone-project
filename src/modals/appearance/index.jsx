@@ -1,7 +1,12 @@
+import classNames from "classnames";
 import { Link } from "react-router-dom";
 import Button from "~/components/button";
+import { setBackgroundColor, setBoxShadow, setColor } from "~/store/appearance/actions";
+import { useAppearance } from "~/store/appearance/hooks";
 
-export default function AppearanceModal() {
+export default function AppearanceModal({close}) {
+  const { backgroundColor, color } = useAppearance();
+
   return (
     <div className="w-[600px]">
       <h3 className="mt-8 mb-3 text-[23px] leading-7 font-extrabold text-center">
@@ -40,13 +45,103 @@ export default function AppearanceModal() {
               <div className="text-[color:var(--color-base)] leading-5 text-[15px]">
                 X'in merkezinde, tıpkı bunun gibi gönderi denen kısa mesajlar
                 yatar. Gönderiler; fotoğraflar, videolar, bağlantılar, metinler,
-                etiketler ve <Link className="text-[#1d9bf0] hover:underline" to="/x">@X</Link> gibi bahsetmeler içerebilir.
+                etiketler ve{" "}
+                <Link className="text-[#1d9bf0] hover:underline" to="/x">
+                  @X
+                </Link>{" "}
+                gibi bahsetmeler içerebilir.
               </div>
             </div>
           </div>
         </div>
 
-        <Button>Bitti</Button>
+        <h6 className="text-[color:var(--color-base-secondary)] mb-1 leading-5 text-[13px] font-bold">
+          Arka plan
+        </h6>
+        <div className="py-1 px-3 mb-3 gap-1 grid grid-cols-3 bg-[color:var(--background-secondary)] rounded-2xl">
+          <button
+            onClick={() => {
+              setColor({
+                ...color,
+                base: '#0f1419',
+                baseSecondary: '#536471'
+              })
+              setBackgroundColor({
+                name: "light",
+                primary: "#fff",
+                secondary: "#f7f9f9",
+                third: "#eff3f4",
+                modal: "#00000066",
+              });
+              setBoxShadow('rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(255, 255, 255, 0.15) 0px 0px 3px 1px')
+            }}
+            className={classNames(
+              "h-16 px-5 bg-white text-[#0f1419] border font-bold border-white/10 rounded",
+              {
+                "!border-[color:var(--color-primary)]":
+                  backgroundColor.name == "light",
+              }
+            )}
+          >
+            Varsayılan
+          </button>
+          <button
+            onClick={() => {
+              setColor({
+                ...color,
+                base: '#f7f9f9',
+                baseSecondary: '#8b98a5'
+              })
+              setBackgroundColor({
+                name: "dark",
+                primary: "#15202b",
+                secondary: "#1e2732",
+                third: "#263340",
+                modal: "#5b708366",
+              });
+              setBoxShadow('rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(255, 255, 255, 0.15) 0px 0px 3px 1px')
+            }}
+            className={classNames(
+              "h-16 px-5 bg-[#15202b] text-[#f7f9f9] border font-bold border-white/10 rounded",
+              {
+                "!border-[color:var(--color-primary)]":
+                  backgroundColor.name == "dark",
+              }
+            )}
+          >
+            Loş
+          </button>
+          <button
+            onClick={() => {
+              setColor({
+                ...color,
+                base: '#e7e9ea',
+                baseSecondary: '#71767b'
+              })
+              setBackgroundColor({
+                name: "darker",
+                primary: "#000",
+                secondary: "#16181c",
+                third: "#212327",
+                modal: "#5b708366",
+              });
+              setBoxShadow('rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(255, 255, 255, 0.15) 0px 0px 3px 1px')
+            }}
+            className={classNames(
+              "h-16 px-5 bg-black text-[#f7f9f9] border font-bold border-white/10 rounded",
+              {
+                "!border-[color:var(--color-primary)]":
+                  backgroundColor.name == "darker",
+              }
+            )}
+          >
+            Işıklar kapalı
+          </button>
+        </div>
+
+        <div className="flex items-center justify-center">
+          <Button onClick={close}>Bitti</Button>
+        </div>
       </div>
     </div>
   );
