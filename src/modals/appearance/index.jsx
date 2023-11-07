@@ -7,6 +7,7 @@ import {
   setColor,
 } from "~/store/appearance/actions";
 import { useAppearance } from "~/store/appearance/hooks";
+import { colors } from "~/utils/consts";
 
 export default function AppearanceModal({ close }) {
   const { backgroundColor, color } = useAppearance();
@@ -60,6 +61,32 @@ export default function AppearanceModal({ close }) {
         </div>
 
         <h6 className="text-[color:var(--color-base-secondary)] mb-1 leading-5 text-[13px] font-bold">
+          Renk
+        </h6>
+        <div className="bg-[color:var(--background-secondary)] py-2 mb-3 rounded-2xl flex justify-around items-center">
+          {colors.map((c, index) => (
+            <button
+              key={index}
+              onClick={() => {
+                setColor({
+                  ...color,
+                  primary: c
+                  
+                })
+              }}    
+              style={{ "--bg": c }}
+              className="w-10 h-10 rounded-full bg-[color:var(--bg)] flex items-center justify-center text-white"
+            >
+              {color.primary == c && (
+                <svg viewBox="0 0 24 24" width={25}>
+                  <path fill="currentColor" d="M9.64 18.952l-5.55-4.861 1.317-1.504 3.951 3.459 8.459-10.948L19.4 6.32 9.64 18.952z" />
+                </svg>
+              )}
+            </button>
+          ))}
+        </div>
+
+        <h6 className="text-[color:var(--color-base-secondary)] mb-1 leading-5 text-[13px] font-bold">
           Arka plan
         </h6>
         <div className="py-2 px-4 mb-3 gap-2 grid grid-cols-3 bg-[color:var(--background-secondary)] rounded-2xl">
@@ -92,7 +119,7 @@ export default function AppearanceModal({ close }) {
             <div className="w-10 h-10 flex-shrink-0 rounded-full group-hover:bg-black/5 flex items-center justify-center">
               <div
                 className={classNames(
-                  "w-5 h-5 rounded-full border-2 border-[#5c6e7e] flex items-center justify-center",
+                  "w-5 h-5 rounded-full border-2 border-[#b9cad3] flex items-center justify-center",
                   {
                     "!border-[color:var(--color-primary)] !bg-[color:var(--color-primary)] text-white":
                       backgroundColor.name == "light",
