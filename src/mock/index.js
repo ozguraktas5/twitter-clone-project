@@ -15,7 +15,7 @@ export const whoFollowUsers = [
         id: 5,
         username: "buradabi",
         fullName: "oradabiriydi",
-        avatar: "https://pbs.twimg.com/profile_images/1697345125209288705/dUKCfrX-_bigger.jpg",
+        avatar: "https://pbs.twimg.com/profile_images/1688174919782117376/d6bQcrZs_bigger.jpg",
         verified: true
     }
 ]
