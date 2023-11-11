@@ -4,6 +4,8 @@ import Content from "./content";
 import StickyHeader from "../sticky-header";
 import { TabContext } from "./context";
 import PropTypes from "prop-types";
+import Items from "./items";
+import Item from "./item";
 
 export default function Tab({children, activeTab}) {
     const [active, setActive] = useState(activeTab)
